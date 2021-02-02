@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="8dp"
+    style="@style/cardTheme"
     android:background="@drawable/ic_launcher_background">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -51,7 +51,7 @@
             android:layout_marginBottom="8dp"
             android:textStyle="bold"
             android:textSize="16sp"
-            android:textColor="@color/white"
+            android:textColor="@color/secondaryTextColor"
             android:textAlignment="textEnd"
             android:text="Free"
             app:layout_constraintBottom_toBottomOf="parent"

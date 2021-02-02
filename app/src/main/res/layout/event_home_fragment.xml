@@ -4,12 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="@color/bgColor"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/app_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="Events"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -19,16 +21,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:hint="price"
         app:layout_constraintBottom_toBottomOf="@+id/app_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/app_title"
-        app:layout_constraintWidth_percent=".2">
+        app:layout_constraintWidth_percent=".3">
 
         <com.google.android.material.textfield.MaterialAutoCompleteTextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="12sp" />
     </com.google.android.material.textfield.TextInputLayout>
     <HorizontalScrollView
         android:id="@+id/categories_view"
@@ -42,7 +48,8 @@
         app:layout_constraintTop_toBottomOf="@id/app_title">
         <com.google.android.material.chip.ChipGroup
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:singleLine="true">
             <com.google.android.material.chip.Chip
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
